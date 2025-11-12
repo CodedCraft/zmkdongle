@@ -1,1 +1,24 @@
+if SHIELD_HHKBXPLANCK_DONGLE
 
+config ZMK_KEYBOARD_NAME
+    default "HHKBxPlanckDongle"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+config ZMK_SPLIT
+    default y
+
+# Set this to the number of peripherals your dongle will have.
+# Suppose you only have one peripheral (your keyboard) — then:
+config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
+    default 1
+
+# Set BT_MAX_CONN and BT_MAX_PAIRED (e.g. peripheral + maybe host profiles)
+config BT_MAX_CONN
+    default 6
+
+config BT_MAX_PAIRED
+    default 6
+
+endif
